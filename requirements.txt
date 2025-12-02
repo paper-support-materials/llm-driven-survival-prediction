@@ -1,0 +1,15 @@
+numpy~=2.1.2
+lifelines~=0.30.0
+tqdm~=4.67.1
+datasets~=3.3.2
+torch~=2.6.0+cu118
+pandas~=2.2.3
+huggingface-hub~=0.36.0
+scikit-learn~=1.6.1
+transformers~=4.53.0
+scipy~=1.15.2
+matplotlib~=3.10.1
+trl~=0.16.0
+peft~=0.15.1
+joblib~=1.4.2
+scikit-survival
