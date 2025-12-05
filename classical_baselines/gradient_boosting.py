@@ -50,12 +50,8 @@ def perform_decision(base_data_dir="Folds_Dimitris", result_folder="gradient_boo
         x_test_scaled = scaler.transform(x_test)
 
         model = GradientBoostingSurvivalAnalysis(n_estimators=100, max_depth=5, random_state=42)
-        print("qui")
-
         model.fit(x_train_scaled, y_train)
-
         survival_funcs = model.predict_survival_function(x_test_scaled)
-
         y_pred = np.array([np.trapz(surv.y, surv.x) for surv in survival_funcs])
 
         survival_results = {
@@ -69,3 +65,4 @@ def perform_decision(base_data_dir="Folds_Dimitris", result_folder="gradient_boo
 
 if __name__ == '__main__':
     perform_decision()
+
